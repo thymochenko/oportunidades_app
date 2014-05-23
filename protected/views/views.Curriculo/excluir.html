@@ -1,0 +1,10 @@
+<html>
+    <head></head>
+	<body>
+	<h1 style="background-color:red;color:#fff">Deseja Deletar o Curriculo?</h1>
+	   <form action="page.php?class=curriculo&method=destroy&id=<?php echo $collection[0]->id ?>" method="POST" name="delete">
+	    <input type="hidden" name="delete" value="Advogado" >
+	    <input type="submit" name="" value="deletar">
+	   </form>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+<?php
+$vaga = $collection;
+?>
+<html>
+    <head></head>
+	<body>
+	<h1 style="background-color:red;color:#fff">Deseja Deletar o Registro <?php echo $vaga[0]->titulo ?></h1>
+	   <form action="page.php?class=vaga&method=_destroy&id=<?php echo $vaga[0]->id ?>" method="POST" name="delete">
+		<input type="hidden" name="delete" value="Vaga" >
+		<input type="submit" name="" value="deletar">
+	   </form>
+	</body>
+</html>

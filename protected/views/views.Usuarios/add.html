@@ -1,0 +1,35 @@
+<html>
+    <head><title>Adicionar</title></head>
+	<body>
+	    <form method="POST" enctype="multipart/form-data" action="main.php">
+        <fieldset id="personal">
+		<legend>Cadastro de Usuarios </legend>
+        <label for="name">Nome de Usuario</label>
+        <input type="text" name="username" id="nome"/><br><br>
+		
+        <label for="name">Senha:</label>
+        <input type="password" name="password" id="nome"/><br><br>
+			
+        <label for="name">email:</label>
+        <input type="text" name="emailaddress" id=""/><br><br>
+	
+        <label for="descricao">Descricao</label>
+        <textarea name="descricao"></textarea><br><br>
+		
+		<label for="arquivo">Foto</label>
+        <input type="file" name="user_img" id="arquivo" value=""/><br><br>
+		
+		<label for="tipo">Tipo Usuário</label>
+		
+		<select name="user_type">
+			<option value="1">Administrador</option>
+			<option value="2">Usuário</option>
+		</select><br><br>
+		
+		<input type="submit" name="cadastrar" value="cadastrar">
+	    <input type="hidden" name="insert" value="Usuarios">
+		
+    </fieldset>
+    </form>
+    </body>
+</html>

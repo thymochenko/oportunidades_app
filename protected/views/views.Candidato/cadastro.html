@@ -1,0 +1,24 @@
+<script src="js/ajax.request.cdt.js"></script>
+
+<h2>Cadastro de Candidato</h2><br>
+<form id="cadastro_candidato" name="cadastro_empresa" enctype="multipart/form-data" id="cadastro_empresa" action="page.php" method="post">
+    <b>Cpf:</b> <br><input type="text" name="cpf" id="cpf"><br><br>
+    <b>Nome:</b> <br><input type="text" name="nome"><br><br>
+    <b>Data de Nascimento:</b> <br><input type="text" id="campoData" name="data_nasc"><br><br>
+    <b>Email:</b> <br><input type="text" name="email"><br><br>
+    <b>Telefone:</b> <br><input type="text" name="telefone" id="campoTelefone"><br><br>
+    <b>Cep:</b> <br><input id="cep" type="text" name="cep"><br><br>
+    <div id="ajaxBoxCorreiosData">
+    </div>
+    <b>Foto:</b> <br><input type="file" name="imagem"><br><br>
+    <b>Senha:</b> <br><input type="password" name="senha"><br><br>
+    <b>Confirmação de Senha:</b> <br><input type="password" name="senha_confirm"><br><br>
+    
+    <input type="hidden" name="insert" value="Candidato"><br>
+    <h2>Curriculo</h2>
+    <b>Informações:</b><br><textarea rows="10" cols="70" name="info_adicionais"></textarea><br>
+    <b>Formação Acadêmica:</b><br><textarea rows="10" cols="70" name="formacao_academica"></textarea><br>
+    <b>Experências Adicionais:</b><br><textarea rows="10" cols="70" name="exp_adicionais"></textarea>
+    
+<input type="submit" name="enviar" value="enviar"><br>
+</form>

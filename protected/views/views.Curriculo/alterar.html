@@ -1,0 +1,12 @@
+
+<h2>Curriculo</h2>
+<form action="page.php" method="post">
+<b>Tempo de Inscrição:</b> <br><input type="text" name="tempo_inscricao" value="<?php echo $collection[0]->tempo_inscricao ?>"><br><br>
+<b>Local de Atuação:</b> <br><input type="text" name="local_atuacao" value="<?php echo $collection[0]->local_atuacao ?>"><br><br>
+<b>Informações:</b><br><textarea rows="10" cols="70" name="info_adicionais"><?php echo $collection[0]->info_adicionais ?></textarea><br>
+<b>Formação Acadêmica:</b><br><textarea rows="10" cols="70" name="formacao_academica"><?php echo $collection[0]->formacao_academica ?></textarea><br>
+<b>Experências Adicionais:</b><br><textarea rows="10" cols="70" name="exp_adicionais"><?php echo $collection[0]->exp_adicionais ?></textarea>
+<input type="submit" name="" value="enviar"><br>
+<input type="hidden" name="update" value="Curriculo">   <br>
+<input type="hidden" name="id" value="<?php echo $collection[0]->id ?>">   <br>
+</form>

@@ -1,0 +1,16 @@
+<h1>Vagas cadastradas pelas empresas</h1><br />
+<?php foreach($collection as $vagas):?>
+<div id="list">
+
+    <a href="page.php?class=vaga&method=visualizar&id=<?php echo $vagas->id ?>" class="thumb" title="An image"><img src="/oportunidades_app/media/files/<?php echo $vagas->user_img ?>" width="100" height="80"/></a>
+    <div class="titlelist">
+        <a href="page.php?class=vaga&method=visualizar&id=<?php echo $vagas->id ?>" class="header"><?php echo substr($vagas->titulo,0,20) ?></a>
+        <br>
+        <p>
+            <a href="page.php?class=vaga&method=visualizar&id=<?php echo $vagas->id ?>" class="text"><?php echo substr($vagas->descricao,0,230) ?></a>
+            <br><a href="page.php?class=vaga&method=visualizar&id=<?php echo $vagas->id ?>" class="btn">Visualizar vaga</a>
+        </p>
+    </div>
+    <div class="meta">Postado por: <?php echo $vagas->nome ?></div>
+</div>
+<?php endforeach;?>

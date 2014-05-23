@@ -1,0 +1,66 @@
+
+            <style>   
+			@import "http://localhost/oportunidades/js/datatables/media/css/demo_page.css";
+
+			@import "http://localhost/oportunidades/js/datatables/media/css/demo_table_jui.css";
+
+			@import "http://localhost/oportunidades/js/datatables/examples/examples_support/themes/smoothness/jquery-ui-1.8.4.custom.css";
+			</style>        
+		 <script type="text/javascript" language="javascript" src="http://localhost/oportunidades/js/datatables/media/js/jquery.js"></script>
+		 <script type="text/javascript" language="javascript" src="http://localhost/oportunidades/js/datatables/media/js/jquery.dataTables.js"></script>
+		 <script type="text/javascript" charset="iso-8859-1">
+
+			$(document).ready(function() { 
+
+				oTable = $("#example").dataTable({ 
+					"bJQueryUI": true,
+					"sPaginationType": "full_numbers",
+					"aaSorting": [[ 0, "asc"]],
+					"iDisplayLength": 30
+				});
+			} );
+		    </script>		<!-- theme -->
+        
+<link href="http://localhost/oportunidades/js/jquery-ui/jquery-ui/css/ui-lightness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+<script src="http://localhost/oportunidades/jsjquery-ui/jquery-ui/js/jquery-ui-1.9.1.custom.js"></script> <script type="text/javascript" src="media/js/lightbox/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="media/js/chosen/chosen/chosen.css" media="screen" />
+
+<script type="text/javascript">
+    $(function() {
+        $('#gallery a').lightBox();
+		$('div .gallery a').lightBox();
+    });
+    </script>
+
+<link rel="stylesheet" type="text/css" media="screen" href="media/examplefiles/css/all-examples.css">	
+<?php $user = $collection['user']; ?>
+<?php $curriculos = $collection['curriculo']; ?>
+<div >
+<h2><img src="/oportunidades_app/media/files/<?php echo $user[0]->user_img ?>" width="80" height="50"/><span style="position:relative;top:-20px;"><b> Bem vindo</b> <span style="color:red"><?php echo $user[0]->username ?></span></span></h2><br>
+</div>
+
+<h6>Gerenciar Curriculo Cadastrado</h6>
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example" width="100%">
+<thead>
+<tr>
+    <th>id</th>
+    <th>informações</th>
+    <th>formação acadêmica</th>	
+    <th>informações</th>
+    <th>ações</th>
+</tr>
+</thead>
+<tbody>
+<tr class="">
+<?php foreach($curriculos as $k=>$curriculo):?>
+<td class="texto_table_index"><?php echo $k ?></td>
+<td class="texto_table_index"><?php echo $curriculo->info_adicionais ?></td>
+<td class="texto_table_index"><?php echo($curriculo->formacao_academica) ?></td>
+<td><?php echo substr($curriculo->exp_adicionais,0,400) ?>[...]</td>
+ <td>
+ <a href="?class=curriculo&method=alterar&id=<?php echo SessionRegistry::getValue('user_id')?>"><img src="http://localhost/admin/media/admin_template/img/icons/page_white_edit.png" title="Alterar Curriculo" width="16" height="16" />
+ <a href="?class=curriculo&method=excluir&id=<?php echo $curriculo->id ?>"><img src="http://localhost/admin/media/admin_template/img/icons/page_white_delete.png" title="Participar" width="16" height="16" />
+ </td>
+</tr>
+ <?php endforeach; ?>
+</table>

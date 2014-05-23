@@ -1,0 +1,23 @@
+
+<?php  $empresa = $collection; ?>
+<script src="js/ajax.request.adv.js"></script>
+
+<h2>Atualização de Dados</h2><br>
+<form id="cadastro_empresa" name="cadastro_empresa" enctype="multipart/form-data" id="cadastro_empresa" action="page.php" method="post">
+    <b>CNPJ:</b> <br><input type="text" name="cnpj" id="cnpj" value="<?php echo $empresa[0]->cnpj ?>"><br><br>
+	<b>Nome ou Razão Social</b> <br><input type="text" name="nome" value="<?php echo $empresa[0]->nome ?>"><br><br>
+    <b>Ramo(Area de Atuação):</b> <br><input type="text" name="ramo" value="<?php echo $empresa[0]->ramo ?>"><br><br>
+    <b>Email:</b> <br><input type="text" name="email" value="<?php echo $empresa[0]->email ?>"><br><br>
+    <b>Telefone:</b> <br><input type="text" name="telefone" id="campoTelefone" value="<?php echo $empresa[0]->telefone ?>"><br><br>
+    <b>Cep:</b> <br><input id="cep" type="text" name="cep" value="<?php echo $empresa[0]->cep ?>"><br><br>
+    <div id="ajaxBoxCorreiosData">
+    </div>
+    <b>Foto:</b> <br><input type="file" name="imagem"><br><br>
+    <b>Senha:</b> <br><input type="password" name="senha"><br><br>
+    <b>Confirmação de Senha:</b> <br><input type="password" name="senha_confirm"><br><br>
+    
+   <input type="hidden" name="id" value="<?php echo $empresa[0]->id ?>"><br>
+   <input type="hidden" name="update" value="Empresa"><br>
+    
+<input type="submit" name="enviar" value="enviar"><br>
+</form>

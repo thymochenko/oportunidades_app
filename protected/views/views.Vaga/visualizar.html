@@ -1,0 +1,9 @@
+<?php $vagas = $collection[0]; ?>
+
+	<h1><?php echo $vagas->titulo ?></h1>
+	<h2>Oferecida pela Empresa : <?php echo $vagas->nome ?></h2>
+	<a href="#" class="thumb" title="An image"><img src="/oportunidades_app/media/files/<?php echo $vagas->user_img ?>" width="300" height="200"/></a>
+	<div class="excerpt">
+	<p><?php echo nl2br($vagas->descricao)?></p>
+	</div>
+</li>

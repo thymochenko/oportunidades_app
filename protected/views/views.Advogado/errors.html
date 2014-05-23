@@ -1,0 +1,21 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    </head>
+    <body>
+        <div id="erros">
+            <h2>Os Seguintes Erros foram Encontrados ao preencher o formulário</h2>
+            
+            <?php foreach($collection as $k=>$erros):?>
+                <h4 style="">*<?php echo $erros ?></h4>
+            <?php endforeach; ?>
+        </div>
+    </body>
+</html>
+<?php SessionRegistry::freeSession();?>

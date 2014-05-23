@@ -1,0 +1,15 @@
+<html>
+    <head>
+        {php}Partial::init()->module('ApplicationController')->message('css');{/php}
+        {php}Partial::init()->module('ApplicationController')->message('javascripts');{/php}
+        {php}Partial::init()->module('ApplicationController')->message('colorBoxSettings');{/php}
+    </head>
+    {php}Partial::init()->module('ApplicationController')->message('menu');{/php}
+    <body>
+	{php}
+        $frontController=_AutoLoad::getFrontController();
+        $frontController->listering();
+        $frontController->run();
+	{/php}
+	</body>
+</html> 

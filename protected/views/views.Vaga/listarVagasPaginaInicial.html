@@ -1,0 +1,11 @@
+<?php //var_dump($collection); ?>
+<?php foreach($collection as $vagas):?>
+<li>
+	<a href="page.php?class=vaga&method=visualizar&id=<?php echo $vagas->id ?>" class="thumb" title="An image"><img src="/oportunidades_app/media/files/<?php echo $vagas->user_img ?>" width="300" height="200"/></a>
+	<div class="excerpt">
+	<a href="page.php?class=vaga&method=visualizar&id=<?php echo $vagas->id ?>" class="header"><?php echo substr($vagas->titulo,0,20) ?></a>
+	<a href="page.php?class=vaga&method=visualizar&id=<?php echo $vagas->id ?>" class="text"><?php echo substr($vagas->descricao,0,320) ?></a>
+	<div class="meta"><?php echo $vagas->nome ?> on 23 Jun, 2010</div>
+	</div>
+</li>
+<?php endforeach;?>

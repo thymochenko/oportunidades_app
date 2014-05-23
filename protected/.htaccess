@@ -1,0 +1,11 @@
+#http://localhost/workt/posts/getPostfor/ORM_poderoso_=_Doctrine/6.html
+#http://localhost/workt/category/listCategory/Smarty/2.html
+#http://localhost/workt/posts/actionPager.html
+
+RewriteEngine On
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)\.html$ /aguia/index.php?class=$1&method=$2&title=$3&id=$4 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)\.html$ /aguia/index.php?class=$1&method=$2&type=$3&id=$4 [L]
+RewriteRule ^([^/]*)/([^/]*)\.html$ /aguia/index.php?class=$1&method=$2 [L]
+
+
+

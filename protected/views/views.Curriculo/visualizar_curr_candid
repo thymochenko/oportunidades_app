@@ -1,0 +1,27 @@
+<?php 
+$curriculo= $collection['curriculo'];
+$pessoa = $collection['pessoa'];
+$pessoa_attr = $collection['user_attr'];
+?>
+<!--9461 3059-->
+<h1><b><?php echo utf8_decode('Currículo') ?></b></h1>
+<hr>
+<div id="img" style="float:right"><img src="/oportunidades_app/media/files/<?php echo $pessoa_attr[0]->user_thumb ?>" width="150" height="110"/></div>
+<h1>Nome :<b> <?php echo $pessoa[0]->nome; ?></b></h1>
+<h4>Email : <?php echo $pessoa[0]->email; ?></h4>
+<h4>cpf : <?php echo $pessoa[0]->cpf; ?></h4>
+<h4>Telefone: <?php echo $pessoa[0]->telefone; ?></h4><br>
+<h1><b><?php echo utf8_decode('Informações Curriculares'); ?> </b></h1><hr>
+<?php if($curriculo[0]->area_atuacao): ?>
+<h1><b><?php echo utf8_decode('Área de Atuação');?></b>: </h1>
+<p><?php echo $curriculo[0]->area_atuacao; ?></p>
+<?php endif; ?>
+
+<h1><b>Info Adicionais:</b> </h1>
+<?php if($curriculo[0]->info_adicionais): ?>
+<p><?php echo nl2br($curriculo[0]->info_adicionais); ?></p>
+<?php endif; ?>
+<h1><b><?php echo utf8_decode('Experiência adicional');?></b></h1>
+<?php if($curriculo[0]->formacao_academica): ?>
+<p><?php echo nl2br($curriculo[0]->formacao_academica); ?></p>
+<?php endif; ?>
